@@ -1,0 +1,5 @@
+Gunner: aim shoot grenade cover spray 
+Brawler: hit punch swing charge tackle throw
+Technomancer: fire ice shock shoot
+Hacker: shoot hack repair switch
+Medic: cover heal help
