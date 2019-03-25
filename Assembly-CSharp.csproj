@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7E61D3C1-E8AD-A96A-8D4E-B285F9A3CBD0}</ProjectGuid>
+    <ProjectGuid>{E55470C0-41AF-E111-F630-B01E4B14FE0C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CombatManager.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
@@ -68,25 +69,27 @@
     <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\Word.cs" />
     <Compile Include="Assets\Scripts\WordControl.cs" />
+    <Compile Include="Assets\Scripts\WordDisplay.cs" />
     <Compile Include="Assets\Scripts\WordGenerator.cs" />
-    <Compile Include="Assets\WordDisplay.cs" />
-    <Compile Include="Assets\WordInput.cs" />
-    <Compile Include="Assets\WordSpawner.cs" />
+    <Compile Include="Assets\Scripts\WordInput.cs" />
+    <Compile Include="Assets\Scripts\WordSpawner.cs" />
+    <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
+    <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
     <None Include="Assets\Files\Commands.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -290,13 +293,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Jam7/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>Z:/IGMProfile/Desktop/Jam7/Jam-7/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

@@ -426,6 +426,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2081154027, guid: a1e41933f4942ee47a2e2b3ea673f96e, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1e41933f4942ee47a2e2b3ea673f96e, type: 3}
 --- !u!1001 &1691777430170745165
@@ -564,5 +569,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4587220410288746704, guid: ceb11dcf7b444cd4fb1a35d301f6cba0,
+        type: 3}
+      propertyPath: wordPrefab
+      value: 
+      objectReference: {fileID: 734016936585418135, guid: 6ceb7abff25cf3d45a7acf45d816ada8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb11dcf7b444cd4fb1a35d301f6cba0, type: 3}
