@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -15,12 +16,17 @@ public class Player : MonoBehaviour
     
     private int job;
 
+    public Text text;
+
     enum Jobs { Gunner, Brawler, Technomancer, Hacker, Medic};
     int[,] starterValues = { {2,3,3,5,2,0},{5,1,1,3,5,0},{1,2,4,4,2,5},{2,4,4,3,2,0},{1,3,2,3,4,5} };
 
     // Start is called before the first frame update
     void Start()
     {
+
+        
+
         job = Random.Range(0, 5);
         STR = starterValues[job,0];
         AGL = starterValues[job,1];
