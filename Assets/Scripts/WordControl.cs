@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class WordControl : MonoBehaviour
 {
+    public int levelIndex = 0;
     public List<Word> words;
     public WordSpawner wordSpawner;
     public CombatManager combatManager;
+    public WordGenerator wordGenerator;
     private bool hasActiveWord;
     private Word activeWord;
     void Start()
@@ -17,7 +19,7 @@ public class WordControl : MonoBehaviour
     public void AddWord()
     {
         
-        Word word = new Word(WordGenerator.GetRandomWord(), wordSpawner.SpawnWord());
+        Word word = new Word(wordGenerator.GetRandomWord(levelIndex), wordSpawner.SpawnWord());
         Debug.Log(word.word);
         words.Add(word);
     }

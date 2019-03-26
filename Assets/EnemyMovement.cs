@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.transform.tag.Equals("Player"))
         {
             //Player Get Damage
-            combatManager.GetDamage();
+            combatManager.GetDamage(collision);
             Destroy(this.gameObject);
             
         }
