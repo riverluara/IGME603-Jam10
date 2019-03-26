@@ -1,55 +1,76 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+
 public class CombatManager : MonoBehaviour
 {
     public int playerHealth = 50;
     public int enemyDamage = 10;
+    public float enemySpawnTime = 2.0f;
     public GameObject player;
     public Transform playerSpawnPosition;
-    public float enemySpawnTime = 2.0f;
     public Text healthText;
+    public Text scoreText;
     public WordControl wordControl;
+
     private float currentTime;
+    private int score;
+    private SceneControl sceneControl;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log(playerHealth);
         playerHealth = 50;
-        Debug.Log(playerHealth);
+        score = 0;
+
+        healthText.text = "Health: " + playerHealth.ToString();
+        scoreText.text = "Score: " + score;
+
         GameObject _player = Instantiate(player, playerSpawnPosition.position, Quaternion.identity);
+
         currentTime = Time.time;
-        healthText.text = playerHealth.ToString();
+
+        sceneControl = new SceneControl();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        Debug.Log(playerHealth);
         if (playerHealth <= 0)
         {
             //Player Die
         }
-        if((Time.time - currentTime) > enemySpawnTime)
+
+        if ((Time.time - currentTime) > enemySpawnTime)
         {
             EnemySpawn();
+            score += 1;
             currentTime = Time.time;
         }
-        healthText.text = playerHealth.ToString();
 
+        healthText.text = "Health: " + playerHealth.ToString();
+        scoreText.text = "Score: " + score;
+
+        /*
+        // Increase level based off score
+        if (score >= 25)
+            StartCoroutine(sceneControl.Fading("CombatLevel2"));
+        if (score >= 60)
+            StartCoroutine(sceneControl.Fading("CombatLevel3"));
+        */
     }
+
+    // Take Enemy damage
     public void GetDamage()
     {
         playerHealth -= enemyDamage;
-        
-        Debug.Log(playerHealth);
+
+        //Debug.Log(playerHealth);
     }
+
+    // Instantiate Enemies
     void EnemySpawn()
-    {
-        //Instantiate Enemies
+    {        
         wordControl.AddWord();
     }
-    
 }

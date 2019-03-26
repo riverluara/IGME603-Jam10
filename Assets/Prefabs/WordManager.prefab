@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   words: []
   wordSpawner: {fileID: 4587220410288746704}
+  combatManager: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
+    type: 3}
 --- !u!114 &4587220410288746705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,5 +74,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7901ad26089150a43bac7672f7e0bb65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordPrefab: {fileID: 3695298650057050564, guid: 6ceb7abff25cf3d45a7acf45d816ada8,
+  wordPrefab: {fileID: 6770110690516266098, guid: 052d3e99371069c45aac36e71b10376c,
     type: 3}
