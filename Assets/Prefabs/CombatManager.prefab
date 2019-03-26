@@ -43,3 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ec2c70927e93446b46dceacf8cc12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: -60
+  enemyDamage: 10
+  player: {fileID: 6357351610670663800, guid: d4de62c7e90e0d247b89505a0efdede4, type: 3}
+  playerSpawnPosition: {fileID: 2384185084160963266, guid: d4de62c7e90e0d247b89505a0efdede4,
+    type: 3}
+  enemySpawnTime: 2
+  healthText: {fileID: 0}
+  wordControl: {fileID: 0}

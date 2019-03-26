@@ -6,14 +6,12 @@ public class WordControl : MonoBehaviour
 {
     public List<Word> words;
     public WordSpawner wordSpawner;
-
+    public CombatManager combatManager;
     private bool hasActiveWord;
     private Word activeWord;
     void Start()
     {
-        AddWord();
-        AddWord();
-        AddWord();
+        
     }
 
     public void AddWord()
