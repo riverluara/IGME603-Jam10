@@ -7,10 +7,14 @@ public class CombatManager : MonoBehaviour
     public int enemyDamage = 10;
     public float enemySpawnTime = 2.0f;
     public GameObject player;
+    //public GameObject player2;
     public Transform playerSpawnPosition;
+    //public Transform playerSpawnPosition2;
     public Text healthText;
     public Text scoreText;
     public WordControl wordControl;
+
+   // public WordControl2 wordControl2;
 
     private float currentTime;
     private int score;
@@ -27,7 +31,7 @@ public class CombatManager : MonoBehaviour
         scoreText.text = "Score: " + score;
 
         GameObject _player = Instantiate(player, playerSpawnPosition.position, Quaternion.identity);
-
+        //GameObject _player2 = Instantiate(player2, playerSpawnPosition2.position, Quaternion.identity);
         currentTime = Time.time;
 
         sceneControl = new SceneControl();
@@ -72,5 +76,6 @@ public class CombatManager : MonoBehaviour
     void EnemySpawn()
     {        
         wordControl.AddWord();
+       // wordControl2.AddWord();
     }
 }

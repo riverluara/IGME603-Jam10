@@ -89,11 +89,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076729976875601590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8873658b247e13458a3a1df94b885fe, type: 3}
+  m_Script: {fileID: 11500000, guid: c4b0e221839237244bca62956193691c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 6463625766638753531}
-  enemy: {fileID: 3223077738297289410}
+  word: 
 --- !u!1 &3223077738297289410
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f418028ceb66ffb4fb1db837757f63de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 2384185084160963266, guid: f68afd5bb6453494ca9f251e0a90dc6a,
+  targetTransform: {fileID: 2384185084160963266, guid: 28f609b69052a054284e2240f2f8053d,
     type: 3}
   speed: 1
   combatManager: {fileID: 0}
