@@ -374,6 +374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125ebfbe5e5de97498ee5e9c3a9b99df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  material1: {fileID: 2100000, guid: 49d5e0a69485fac4488033dbae9054c7, type: 2}
+  material2: {fileID: 2100000, guid: bfe506e647e741d47ad5b01e7511b055, type: 2}
   scenePath: test
 --- !u!1 &450135635
 GameObject:

@@ -9,13 +9,19 @@ public class NodeManager : MonoBehaviour {
     private static NodeManager nodeManager = null;
     public static NodeManager getInstance() { return nodeManager; }
 
+    private static int NodeCount = 0;
+
     void Start(){
         if (nodeManager == null) nodeManager = this;
         nodes = _nodes;
+
+        if (NodeCount < nodes.Length) { nodes[NodeCount].GetComponent<Node>().IsLocked = false;}
+
         if (nodes.Length != 0){
             bool isSaved = PlayerPrefs.HasKey(nodes[0].name);
 
-            if(isSaved){ loadNodeData(); }
+            if(!isSaved){ loadNodeData();
+            Debug.Log("Saved"); }
             else{ foreach(GameObject node in nodes){ saveNodeData(node); }}
         }
         else { Debug.Log("No node");}

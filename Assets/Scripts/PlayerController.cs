@@ -33,10 +33,8 @@ public class PlayerController : MonoBehaviour {
             if(parent.name == "Nodes"){
                 //Debug.Log(collision.gameObject.transform.parent.name);
                 if(Input.GetKeyDown(KeyCode.J)){
-                    Debug.Log("J pressed");
                     NodeManager.getInstance().loadScene(collision.gameObject);
                 }
             }
-                //
     }
 }
