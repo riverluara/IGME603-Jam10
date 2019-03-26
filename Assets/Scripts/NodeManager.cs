@@ -9,6 +9,8 @@ public class NodeManager : MonoBehaviour {
     private static NodeManager nodeManager = null;
     public static NodeManager getInstance() { return nodeManager; }
 
+    private static bool isS = false;
+
     private static int NodeCount = 0;
 
     void Start(){
@@ -18,11 +20,17 @@ public class NodeManager : MonoBehaviour {
         if (NodeCount < nodes.Length) { nodes[NodeCount].GetComponent<Node>().IsLocked = false;}
 
         if (nodes.Length != 0){
+            if(!isS){
+                foreach(GameObject node in nodes){ saveNodeData(node); }
+                Debug.Log("Hello");
+                isS = true;
+            }
             bool isSaved = PlayerPrefs.HasKey(nodes[0].name);
 
-            if(!isSaved){ loadNodeData();
+            if(isSaved){ loadNodeData();
             Debug.Log("Saved"); }
-            else{ foreach(GameObject node in nodes){ saveNodeData(node); }}
+            else{ foreach(GameObject node in nodes){ saveNodeData(node);}
+            Debug.Log("Hello again");}
         }
         else { Debug.Log("No node");}
     }
@@ -34,6 +42,7 @@ public class NodeManager : MonoBehaviour {
             PlayerPrefs.SetString(node.name, node.name);
             PlayerPrefs.SetInt(node.name + "isFinished", Convert.ToInt32(n.IsFinished));
             PlayerPrefs.SetInt(node.name + "isLocked", Convert.ToInt32(n.IsLocked));
+            PlayerPrefs.Save();
         }  
     }
 

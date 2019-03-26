@@ -41,7 +41,8 @@ public class Node : MonoBehaviour {
     public void switchScene(){
         if (!isLocked & !isFinished) {
             Debug.Log("Switch to another scene.");
-            isFinished = true;
+            PlayerPrefs.SetInt(gameObject.name + "isFinished", Convert.ToInt32(true));
+            PlayerPrefs.Save();
             SceneManager.LoadScene(scenePath);
         }
     }
