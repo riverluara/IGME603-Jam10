@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CombatManager : MonoBehaviour
 {
     public int playerHealth = 50;
     public int enemyDamage = 10;
-    public float enemySpawnTime = 2.0f;
+    public float enemySpawnTime = 4.0f;
     public GameObject player;
     //public GameObject player2;
     public Transform playerSpawnPosition;
@@ -54,6 +55,12 @@ public class CombatManager : MonoBehaviour
 
         healthText.text = "Health: " + playerHealth.ToString();
         scoreText.text = "Score: " + score;
+
+        if(PlayerPrefs.GetInt("number") == 9)
+        {
+            Debug.Log("111");
+            SceneManager.LoadScene("overworld_1");
+        }
 
         /*
         // Increase level based off score

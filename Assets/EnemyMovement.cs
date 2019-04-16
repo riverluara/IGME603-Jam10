@@ -33,5 +33,12 @@ public class EnemyMovement : MonoBehaviour
             Destroy(this.gameObject);
             
         }
+
+        if (collision.transform.tag.Equals("Fire"))
+        {
+            Destroy(collision.gameObject);
+
+            Destroy(this.gameObject);
+        }
     }
 }

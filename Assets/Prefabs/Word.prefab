@@ -92,3 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb13b5451adfbe341ac3b606737c32f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  enemy: {fileID: 0}
+  firePrefab: {fileID: 0}
+  player: {fileID: 0}
+  fire: {fileID: 0}
+  speed: 5

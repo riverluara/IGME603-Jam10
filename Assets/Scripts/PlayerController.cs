@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
             horizontalMove = Input.GetAxisRaw("Horizontal");
             verticalMove = Input.GetAxisRaw("Vertical");
         }
-        rigidPlayer.MovePosition(rigidPlayer.position + new Vector3(speed * Time.deltaTime * horizontalMove, speed * Time.deltaTime * verticalMove, 0.0f));
+        rigidPlayer.MovePosition(rigidPlayer.position + new Vector3(speed * Time.deltaTime * horizontalMove,0.0f, speed * Time.deltaTime * verticalMove));
     }
 
     void OnTriggerStay(Collider collision) {
