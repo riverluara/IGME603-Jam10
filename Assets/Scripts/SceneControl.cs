@@ -32,7 +32,7 @@ public class SceneControl : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             StartCoroutine(Fading("CombatLevel1"));
-            PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number") + 1);
+            //PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number"));
         }
     }
 

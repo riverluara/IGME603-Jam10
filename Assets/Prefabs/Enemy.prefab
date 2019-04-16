@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 6463625766638753531}
   enemy: {fileID: 3223077738297289410}
-  firePrefab: {fileID: 100000, guid: 9473bf090aaa04164967cdceab413088, type: 3}
+  firePrefab: {fileID: 141530, guid: 369eee557c4d41c479225bf744fa6a5f, type: 3}
   player: {fileID: 2384185084160963266, guid: d4de62c7e90e0d247b89505a0efdede4, type: 3}
   fire: {fileID: 0}
   speed: 4

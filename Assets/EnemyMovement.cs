@@ -8,11 +8,14 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 1.0f;
     public CombatManager combatManager;
     private Vector3 direction;
+    private float destoryTime;
 
     // Start is called before the first frame update
     void Start()
     {
         combatManager = (CombatManager)FindObjectOfType(typeof(CombatManager));
+        destoryTime = 8.0f;
+        Destroy(this.gameObject, destoryTime);
     }
 
     // Update is called once per frame
@@ -38,7 +41,9 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(collision.gameObject);
 
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, destoryTime);
         }
     }
+
+    
 }

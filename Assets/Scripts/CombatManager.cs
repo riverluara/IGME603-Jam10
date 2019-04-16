@@ -58,8 +58,13 @@ public class CombatManager : MonoBehaviour
 
         if(PlayerPrefs.GetInt("number") == 9)
         {
-            Debug.Log("111");
+            PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number") + 1);
             SceneManager.LoadScene("overworld_1");
+        }
+
+        if(PlayerPrefs.GetInt("number") >= 22)
+        {
+            SceneManager.LoadScene("End");
         }
 
         /*

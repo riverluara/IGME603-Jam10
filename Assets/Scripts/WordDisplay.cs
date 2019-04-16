@@ -16,7 +16,8 @@ public class WordDisplay : MonoBehaviour
         if (isFireAttack)
         {
             Vector3 direction = Vector3.Normalize(enemy.transform.position - fire.transform.position);
-            fire.transform.position += direction * speed * Time.deltaTime;
+            fire.transform.forward = direction;
+            //fire.transform.position += direction * speed * Time.deltaTime;
         }
              
     }
