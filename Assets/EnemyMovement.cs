@@ -14,8 +14,8 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         combatManager = (CombatManager)FindObjectOfType(typeof(CombatManager));
-        destoryTime = 8.0f;
-        Destroy(this.gameObject, destoryTime);
+        destoryTime = 25.0f;
+        //Destroy(this.gameObject, destoryTime);
     }
 
     // Update is called once per frame
@@ -32,16 +32,20 @@ public class EnemyMovement : MonoBehaviour
         if (collision.transform.tag.Equals("Player"))
         {
             //Player Get Damage
+            
             combatManager.GetDamage();
+            combatManager.wordControl.DesoryWord();
             Destroy(this.gameObject);
             
         }
 
         if (collision.transform.tag.Equals("Fire"))
         {
-            Destroy(collision.gameObject);
 
-            Destroy(this.gameObject, destoryTime);
+            Debug.Log("collision happens");
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+            //Destroy(this.gameObject, destoryTime);
         }
     }
 

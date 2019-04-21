@@ -53,4 +53,10 @@ public class WordControl : MonoBehaviour
             words.Remove(activeWord);
         }
     }
+
+    public void DesoryWord()
+    {
+        hasActiveWord = false;
+        words.Remove(activeWord);
+    }
 }
