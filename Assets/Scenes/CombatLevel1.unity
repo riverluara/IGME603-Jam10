@@ -650,8 +650,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.023529397, g: 0.81881577, b: 0.9529412, a: 1}
-  m_Intensity: 6.58
-  m_Range: 3.15
+  m_Intensity: 11.09
+  m_Range: 5.85
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -829,8 +829,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9528302, g: 0.109721065, b: 0.022472408, a: 1}
-  m_Intensity: 6.34
-  m_Range: 3.15
+  m_Intensity: 9.63
+  m_Range: 6.71
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1407,8 +1407,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.023529397, g: 0.81881577, b: 0.9529412, a: 1}
-  m_Intensity: 6.58
-  m_Range: 3.15
+  m_Intensity: 7.55
+  m_Range: 5.5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1495,8 +1495,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9528302, g: 0.109721065, b: 0.022472408, a: 1}
-  m_Intensity: 6.34
-  m_Range: 3.15
+  m_Intensity: 9.05
+  m_Range: 4.36
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -2176,6 +2176,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2354440962491322686, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 2354440962491322687, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2231,10 +2236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2354440962491322686, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
+    - target: {fileID: 2354440961818733861, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
         type: 3}
-      propertyPath: m_Name
-      value: Tile
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2354440963549745658, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
         type: 3}
@@ -2245,11 +2250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 3.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354440961818733861, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdadc760acd5074dacf5e99cbfd47dd, type: 3}
