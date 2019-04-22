@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -365,7 +365,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.038892854, g: 0.3009629, b: 0.3584906, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.08114522, b: 0.16981131, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1008,6 +1008,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1691777430209370162, guid: 5489e802ac771c840a0048201c687600,
+        type: 3}
+      propertyPath: m_Name
+      value: CombatManager
+      objectReference: {fileID: 0}
     - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
       propertyPath: healthText
@@ -1062,11 +1067,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2384185084160963266, guid: d4de62c7e90e0d247b89505a0efdede4,
         type: 3}
-    - target: {fileID: 1691777430209370162, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: m_Name
-      value: CombatManager
-      objectReference: {fileID: 0}
     - target: {fileID: 1691777430209370316, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
       propertyPath: m_LocalPosition.x
