@@ -15,7 +15,6 @@ public class LightMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), zPosition);
         originalT = this.transform.position;
     }
     // Update is called once per frame
