@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
             //Player Get Damage
             
             combatManager.GetDamage();
+            combatManager.DamegeEffect();
             combatManager.wordControl.DesoryWord();
             Destroy(this.gameObject);
             

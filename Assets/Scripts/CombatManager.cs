@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class CombatManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class CombatManager : MonoBehaviour
     public Text scoreText;
     public WordControl wordControl;
 
+    public Transform cameraTransform;
+    private Vector3 originalPos;
    // public WordControl2 wordControl2;
 
     private float currentTime;
@@ -36,6 +39,13 @@ public class CombatManager : MonoBehaviour
         currentTime = Time.time;
 
         sceneControl = new SceneControl();
+
+
+    }
+
+    private void OnEnable()
+    {
+        originalPos = cameraTransform.position;
     }
 
     // Update is called once per frame
@@ -90,4 +100,21 @@ public class CombatManager : MonoBehaviour
         wordControl.AddWord();
        // wordControl2.AddWord();
     }
+
+    public void DamegeEffect()
+    {
+        StartCoroutine(CameraShake());
+    }
+
+    public IEnumerator CameraShake()
+    {
+        float shakeTime = 1.0f;
+        while(shakeTime >= 0.0f)
+        {
+            cameraTransform.position = originalPos + Random.insideUnitSphere * 0.5f;
+            shakeTime -= Time.deltaTime;
+        }
+        yield return null;
+    }
+
 }

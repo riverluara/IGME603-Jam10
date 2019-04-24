@@ -2053,6 +2053,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1691777430209370162, guid: 5489e802ac771c840a0048201c687600,
+        type: 3}
+      propertyPath: m_Name
+      value: CombatManager
+      objectReference: {fileID: 0}
     - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
       propertyPath: healthText
@@ -2107,11 +2112,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2384185084160963266, guid: d4de62c7e90e0d247b89505a0efdede4,
         type: 3}
-    - target: {fileID: 1691777430209370162, guid: 5489e802ac771c840a0048201c687600,
+    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
-      propertyPath: m_Name
-      value: CombatManager
-      objectReference: {fileID: 0}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 397387908}
     - target: {fileID: 1691777430209370316, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2176,6 +2181,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2354440962491322686, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 2354440962491322687, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2231,10 +2241,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2354440962491322686, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
+    - target: {fileID: 2354440961818733861, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
         type: 3}
-      propertyPath: m_Name
-      value: Tile
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2354440963549745658, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
         type: 3}
@@ -2245,11 +2255,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 3.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 2354440961818733861, guid: 0cdadc760acd5074dacf5e99cbfd47dd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdadc760acd5074dacf5e99cbfd47dd, type: 3}
