@@ -15,6 +15,8 @@ public class CombatManager : MonoBehaviour
     public Text healthText;
     public Text scoreText;
     public WordControl wordControl;
+    public bool damegeEffect;
+    public float cameraShakeTime = 0.25f;
 
     public Transform cameraTransform;
     private Vector3 originalPos;
@@ -40,12 +42,12 @@ public class CombatManager : MonoBehaviour
 
         sceneControl = new SceneControl();
 
-
+        damegeEffect = false;
     }
 
     private void OnEnable()
     {
-        originalPos = cameraTransform.position;
+        originalPos = cameraTransform.localPosition;
     }
 
     // Update is called once per frame
@@ -84,6 +86,28 @@ public class CombatManager : MonoBehaviour
         if (score >= 60)
             StartCoroutine(sceneControl.Fading("CombatLevel3"));
         */
+
+        
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (damegeEffect)
+        {
+            if(cameraShakeTime >= 0.0f)
+            {
+                cameraTransform.localPosition = originalPos + Random.insideUnitSphere * 0.25f;
+                cameraShakeTime -= Time.deltaTime;
+            }
+            else
+            {
+                cameraTransform.localPosition = originalPos;
+                cameraShakeTime = 0.25f;
+                damegeEffect = false;
+            }
+            
+        }
     }
 
     // Take Enemy damage
@@ -111,10 +135,13 @@ public class CombatManager : MonoBehaviour
         float shakeTime = 1.0f;
         while(shakeTime >= 0.0f)
         {
-            cameraTransform.position = originalPos + Random.insideUnitSphere * 0.5f;
+            cameraTransform.localPosition = originalPos + Random.insideUnitSphere * 2.0f;
+            Debug.Log(cameraTransform.position);
             shakeTime -= Time.deltaTime;
         }
+        
         yield return null;
+        cameraTransform.localPosition = originalPos;
     }
 
 }
