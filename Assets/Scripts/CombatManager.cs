@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     public Text healthText;
     public Text scoreText;
     public WordControl wordControl;
-
+    public HealthBarMovement healthBar;
     public Transform cameraTransform;
     private Vector3 originalPos;
    // public WordControl2 wordControl2;
@@ -31,12 +31,15 @@ public class CombatManager : MonoBehaviour
         playerHealth = 50;
         score = 0;
 
+       
+
         healthText.text = "Health: " + playerHealth.ToString();
         scoreText.text = "Score: " + score;
 
         GameObject _player = Instantiate(player, playerSpawnPosition.position, Quaternion.identity);
         //GameObject _player2 = Instantiate(player2, playerSpawnPosition2.position, Quaternion.identity);
-        currentTime = Time.time;
+        healthBar = _player.GetComponentInChildren<HealthBarMovement>();
+       currentTime = Time.time;
 
         sceneControl = new SceneControl();
 
@@ -90,6 +93,7 @@ public class CombatManager : MonoBehaviour
     public void GetDamage()
     {
         playerHealth -= enemyDamage;
+        healthBar.ChangeLength(playerHealth / 50.0f);
 
         //Debug.Log(playerHealth);
     }

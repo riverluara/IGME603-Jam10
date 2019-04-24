@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2065,53 +2065,14 @@ PrefabInstance:
       objectReference: {fileID: 1646849810}
     - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
-      propertyPath: wordControl
-      value: 
-      objectReference: {fileID: 582401349}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: playerSpawnPosition2
-      value: 
-      objectReference: {fileID: 2384185084160963266, guid: f68afd5bb6453494ca9f251e0a90dc6a,
-        type: 3}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: player2
-      value: 
-      objectReference: {fileID: 6357351610670663800, guid: f68afd5bb6453494ca9f251e0a90dc6a,
-        type: 3}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: wordControl2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: enemySpawnTime
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: healthText2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 576256028}
     - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
-      propertyPath: player
+      propertyPath: wordControl
       value: 
-      objectReference: {fileID: 6357351610670663800, guid: d4de62c7e90e0d247b89505a0efdede4,
-        type: 3}
-    - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
-        type: 3}
-      propertyPath: playerSpawnPosition
-      value: 
-      objectReference: {fileID: 2384185084160963266, guid: d4de62c7e90e0d247b89505a0efdede4,
-        type: 3}
+      objectReference: {fileID: 582401349}
     - target: {fileID: 1691777430209370317, guid: 5489e802ac771c840a0048201c687600,
         type: 3}
       propertyPath: cameraTransform
