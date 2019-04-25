@@ -17,6 +17,8 @@ public class CombatManager : MonoBehaviour
     public WordControl wordControl;
     public bool damegeEffect;
     public float cameraShakeTime = 0.25f;
+    public int destoryCount1;
+    public int destoryCount2;
 
     public HealthBarMovement healthBar;
     public Transform cameraTransform;
@@ -25,7 +27,8 @@ public class CombatManager : MonoBehaviour
 
     private float currentTime;
     private int score;
-    private SceneControl sceneControl;
+    public SceneControl sceneControl;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -44,9 +47,11 @@ public class CombatManager : MonoBehaviour
         healthBar = _player.GetComponentInChildren<HealthBarMovement>();
        currentTime = Time.time;
 
-        sceneControl = new SceneControl();
+        
 
         damegeEffect = false;
+        destoryCount1 = 0;
+        destoryCount2 = 0;
     }
 
     private void OnEnable()
@@ -64,24 +69,46 @@ public class CombatManager : MonoBehaviour
 
         if ((Time.time - currentTime) > enemySpawnTime)
         {
-            EnemySpawn();
-            score += 1;
+            if(PlayerPrefs.GetInt("number") == 8 || PlayerPrefs.GetInt("number") == 20)
+            {
+
+            }
+            else
+            {
+                EnemySpawn();
+                score += 1;
+            }
+            
+            
             currentTime = Time.time;
         }
 
         healthText.text = "Health: " + playerHealth.ToString();
         scoreText.text = "Score: " + score;
 
-        if(PlayerPrefs.GetInt("number") == 9)
+        if(destoryCount1 == 8)
         {
             PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number") + 1);
+            PlayerPrefs.SetInt("numberOfLevel", 2);
             SceneManager.LoadScene("overworld_1");
         }
 
-        if(PlayerPrefs.GetInt("number") >= 22)
+        if(destoryCount2 == 11)
         {
             SceneManager.LoadScene("End");
         }
+
+        //if (PlayerPrefs.GetInt("number") == 9)
+        //{
+        //    PlayerPrefs.SetInt("number", PlayerPrefs.GetInt("number") + 1);
+        //    SceneManager.LoadScene("overworld_1");
+        //}
+
+        //if (PlayerPrefs.GetInt("number") >= 22)
+        //{
+        //    SceneManager.LoadScene("End");
+        //}
+
 
         /*
         // Increase level based off score
@@ -91,7 +118,7 @@ public class CombatManager : MonoBehaviour
             StartCoroutine(sceneControl.Fading("CombatLevel3"));
         */
 
-        
+
 
     }
 

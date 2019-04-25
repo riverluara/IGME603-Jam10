@@ -36,7 +36,17 @@ public class EnemyMovement : MonoBehaviour
             combatManager.GetDamage();
             combatManager.damegeEffect = true;
             combatManager.wordControl.DesoryWord();
+            if(PlayerPrefs.GetInt("numberOfLevel") == 1)
+            {
+                combatManager.destoryCount1++;
+            }
+
+            if(PlayerPrefs.GetInt("numberOfLevel") == 2)
+            {
+                combatManager.destoryCount2++;
+            }
             Destroy(this.gameObject);
+
             
         }
 
@@ -45,6 +55,15 @@ public class EnemyMovement : MonoBehaviour
 
             Debug.Log("collision happens");
             Destroy(collision.gameObject);
+            if (PlayerPrefs.GetInt("numberOfLevel") == 1)
+            {
+                combatManager.destoryCount1++;
+            }
+
+            if (PlayerPrefs.GetInt("numberOfLevel") == 2)
+            {
+                combatManager.destoryCount2++;
+            }
             Destroy(this.gameObject);
             //Destroy(this.gameObject, destoryTime);
         }

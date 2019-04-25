@@ -10,7 +10,6 @@ public class WordGenerator : MonoBehaviour
 "The villagers have fallen asleep",
 "and they will not wake up",
 "Begin",
-"Begin",
 "Trust me",
 "I saw the villagers",
 "They will not wake up",

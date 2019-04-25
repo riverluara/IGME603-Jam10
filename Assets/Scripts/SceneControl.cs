@@ -24,6 +24,8 @@ public class SceneControl : MonoBehaviour
             creditsMenu.SetActive(false);
 
             PlayerPrefs.DeleteKey("number");
+            PlayerPrefs.DeleteKey("numberOfLevel");
+            PlayerPrefs.SetInt("numberOfLevel", 1);
         }
     }
 
